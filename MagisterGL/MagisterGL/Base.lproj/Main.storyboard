@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m7l-ZR-Ljp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,6 +26,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-422" y="47"/>
+        </scene>
+        <!--Isoline View Controller-->
+        <scene sceneID="8Y9-Vc-eqw">
+            <objects>
+                <viewController id="m7l-ZR-Ljp" customClass="IsolineViewController" customModule="MagisterGL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oyx-Vq-ijq"/>
+                        <viewControllerLayoutGuide type="bottom" id="PT1-WG-FmD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X7M-N3-W5V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InP-8N-r3k" customClass="IsolineView" customModule="MagisterGL" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PT1-WG-FmD" firstAttribute="top" secondItem="InP-8N-r3k" secondAttribute="bottom" id="7E5-yw-EGc"/>
+                            <constraint firstItem="InP-8N-r3k" firstAttribute="top" secondItem="oyx-Vq-ijq" secondAttribute="bottom" id="lQ5-mf-LBa"/>
+                            <constraint firstItem="InP-8N-r3k" firstAttribute="leading" secondItem="X7M-N3-W5V" secondAttribute="leading" id="vbv-21-j0Q"/>
+                            <constraint firstAttribute="trailing" secondItem="InP-8N-r3k" secondAttribute="trailing" id="y1O-Ad-EhQ"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="isolineView" destination="InP-8N-r3k" id="iN2-JD-f8y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btf-kk-I7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="46"/>
         </scene>
     </scenes>
 </document>
