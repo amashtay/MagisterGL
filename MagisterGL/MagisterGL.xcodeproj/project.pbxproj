@@ -25,6 +25,7 @@
 		9ADE1F281EED1BFD006D409E /* IsolineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F271EED1BFD006D409E /* IsolineViewController.swift */; };
 		9ADE1F2A1EED1C36006D409E /* IsolineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F291EED1C36006D409E /* IsolineView.swift */; };
 		9ADE1F2C1EED22F5006D409E /* RectangleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F2B1EED22F5006D409E /* RectangleElement.swift */; };
+		9ADE29421EEE9751000F21C9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE29411EEE9751000F21C9 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		9ADE1F271EED1BFD006D409E /* IsolineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsolineViewController.swift; sourceTree = "<group>"; };
 		9ADE1F291EED1C36006D409E /* IsolineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsolineView.swift; sourceTree = "<group>"; };
 		9ADE1F2B1EED22F5006D409E /* RectangleElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleElement.swift; sourceTree = "<group>"; };
+		9ADE29411EEE9751000F21C9 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				9ADE1F271EED1BFD006D409E /* IsolineViewController.swift */,
 				9ADE1F291EED1C36006D409E /* IsolineView.swift */,
 				9ADE1F2B1EED22F5006D409E /* RectangleElement.swift */,
+				9ADE29411EEE9751000F21C9 /* Color.swift */,
 			);
 			path = MagisterGL;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				9ADE1F1B1EED0854006D409E /* Matrix4.swift in Sources */,
 				9ADE1EBC1EED062B006D409E /* AppDelegate.swift in Sources */,
 				9ADE1F1D1EED0854006D409E /* Renderable.swift in Sources */,
+				9ADE29421EEE9751000F21C9 /* Color.swift in Sources */,
 				9ADE1F1E1EED0854006D409E /* Scene.swift in Sources */,
 				9ADE1F1F1EED0854006D409E /* ShaderProgram.swift in Sources */,
 				9ADE1F241EED0CE8006D409E /* Cube.swift in Sources */,
