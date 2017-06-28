@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A577D311F03B0AC0017F40F /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A577D291F03B0AC0017F40F /* Cube.swift */; };
+		9A577D321F03B0AC0017F40F /* Cylinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A577D2A1F03B0AC0017F40F /* Cylinder.swift */; };
+		9A577D331F03B0AC0017F40F /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A577D2B1F03B0AC0017F40F /* Matrix4.swift */; };
+		9A577D341F03B0AC0017F40F /* normalmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A577D2C1F03B0AC0017F40F /* normalmap.png */; };
+		9A577D351F03B0AC0017F40F /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A577D2D1F03B0AC0017F40F /* Renderable.swift */; };
+		9A577D361F03B0AC0017F40F /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A577D2E1F03B0AC0017F40F /* Scene.swift */; };
+		9A577D371F03B0AC0017F40F /* ShaderProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A577D2F1F03B0AC0017F40F /* ShaderProgram.swift */; };
+		9A577D381F03B0AC0017F40F /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A577D301F03B0AC0017F40F /* Texture.swift */; };
 		9ADE1EBC1EED062B006D409E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1EBB1EED062B006D409E /* AppDelegate.swift */; };
 		9ADE1EC11EED062B006D409E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADE1EBF1EED062B006D409E /* Main.storyboard */; };
 		9ADE1EC31EED062B006D409E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ADE1EC21EED062B006D409E /* Assets.xcassets */; };
@@ -14,14 +22,6 @@
 		9ADE1ED01EED07F0006D409E /* MyGLKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1ECD1EED07F0006D409E /* MyGLKViewController.swift */; };
 		9ADE1ED11EED07F0006D409E /* shader.fs in Resources */ = {isa = PBXBuildFile; fileRef = 9ADE1ECE1EED07F0006D409E /* shader.fs */; };
 		9ADE1ED21EED07F0006D409E /* shader.vs in Resources */ = {isa = PBXBuildFile; fileRef = 9ADE1ECF1EED07F0006D409E /* shader.vs */; };
-		9ADE1F1A1EED0854006D409E /* Cylinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F121EED0854006D409E /* Cylinder.swift */; };
-		9ADE1F1B1EED0854006D409E /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F131EED0854006D409E /* Matrix4.swift */; };
-		9ADE1F1C1EED0854006D409E /* normalmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ADE1F141EED0854006D409E /* normalmap.png */; };
-		9ADE1F1D1EED0854006D409E /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F151EED0854006D409E /* Renderable.swift */; };
-		9ADE1F1E1EED0854006D409E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F161EED0854006D409E /* Scene.swift */; };
-		9ADE1F1F1EED0854006D409E /* ShaderProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F171EED0854006D409E /* ShaderProgram.swift */; };
-		9ADE1F201EED0854006D409E /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F181EED0854006D409E /* Texture.swift */; };
-		9ADE1F241EED0CE8006D409E /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F231EED0CE8006D409E /* Cube.swift */; };
 		9ADE1F281EED1BFD006D409E /* IsolineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F271EED1BFD006D409E /* IsolineViewController.swift */; };
 		9ADE1F2A1EED1C36006D409E /* IsolineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F291EED1C36006D409E /* IsolineView.swift */; };
 		9ADE1F2C1EED22F5006D409E /* RectangleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F2B1EED22F5006D409E /* RectangleElement.swift */; };
@@ -29,6 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A577D291F03B0AC0017F40F /* Cube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
+		9A577D2A1F03B0AC0017F40F /* Cylinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cylinder.swift; sourceTree = "<group>"; };
+		9A577D2B1F03B0AC0017F40F /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4.swift; sourceTree = "<group>"; };
+		9A577D2C1F03B0AC0017F40F /* normalmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normalmap.png; sourceTree = "<group>"; };
+		9A577D2D1F03B0AC0017F40F /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
+		9A577D2E1F03B0AC0017F40F /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		9A577D2F1F03B0AC0017F40F /* ShaderProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderProgram.swift; sourceTree = "<group>"; };
+		9A577D301F03B0AC0017F40F /* Texture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
 		9ADE1EB81EED062B006D409E /* MagisterGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagisterGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADE1EBB1EED062B006D409E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ADE1EC01EED062B006D409E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,14 +46,6 @@
 		9ADE1ECD1EED07F0006D409E /* MyGLKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGLKViewController.swift; sourceTree = "<group>"; };
 		9ADE1ECE1EED07F0006D409E /* shader.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
 		9ADE1ECF1EED07F0006D409E /* shader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
-		9ADE1F121EED0854006D409E /* Cylinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cylinder.swift; path = Common/Cylinder.swift; sourceTree = "<group>"; };
-		9ADE1F131EED0854006D409E /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matrix4.swift; path = Common/Matrix4.swift; sourceTree = "<group>"; };
-		9ADE1F141EED0854006D409E /* normalmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normalmap.png; path = Common/normalmap.png; sourceTree = "<group>"; };
-		9ADE1F151EED0854006D409E /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Renderable.swift; path = Common/Renderable.swift; sourceTree = "<group>"; };
-		9ADE1F161EED0854006D409E /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene.swift; path = Common/Scene.swift; sourceTree = "<group>"; };
-		9ADE1F171EED0854006D409E /* ShaderProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShaderProgram.swift; path = Common/ShaderProgram.swift; sourceTree = "<group>"; };
-		9ADE1F181EED0854006D409E /* Texture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Texture.swift; path = Common/Texture.swift; sourceTree = "<group>"; };
-		9ADE1F231EED0CE8006D409E /* Cube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cube.swift; path = Common/Cube.swift; sourceTree = "<group>"; };
 		9ADE1F271EED1BFD006D409E /* IsolineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsolineViewController.swift; sourceTree = "<group>"; };
 		9ADE1F291EED1C36006D409E /* IsolineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsolineView.swift; sourceTree = "<group>"; };
 		9ADE1F2B1EED22F5006D409E /* RectangleElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleElement.swift; sourceTree = "<group>"; };
@@ -63,6 +63,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A577D281F03B0AC0017F40F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9A577D291F03B0AC0017F40F /* Cube.swift */,
+				9A577D2A1F03B0AC0017F40F /* Cylinder.swift */,
+				9A577D2B1F03B0AC0017F40F /* Matrix4.swift */,
+				9A577D2C1F03B0AC0017F40F /* normalmap.png */,
+				9A577D2D1F03B0AC0017F40F /* Renderable.swift */,
+				9A577D2E1F03B0AC0017F40F /* Scene.swift */,
+				9A577D2F1F03B0AC0017F40F /* ShaderProgram.swift */,
+				9A577D301F03B0AC0017F40F /* Texture.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		9ADE1EAF1EED062B006D409E = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +97,7 @@
 		9ADE1EBA1EED062B006D409E /* MagisterGL */ = {
 			isa = PBXGroup;
 			children = (
-				9ADE1F191EED0854006D409E /* Common */,
+				9A577D281F03B0AC0017F40F /* Common */,
 				9ADE1ECD1EED07F0006D409E /* MyGLKViewController.swift */,
 				9ADE1ECE1EED07F0006D409E /* shader.fs */,
 				9ADE1ECF1EED07F0006D409E /* shader.vs */,
@@ -97,22 +112,6 @@
 				9ADE29411EEE9751000F21C9 /* Color.swift */,
 			);
 			path = MagisterGL;
-			sourceTree = "<group>";
-		};
-		9ADE1F191EED0854006D409E /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				9ADE1F121EED0854006D409E /* Cylinder.swift */,
-				9ADE1F131EED0854006D409E /* Matrix4.swift */,
-				9ADE1F141EED0854006D409E /* normalmap.png */,
-				9ADE1F151EED0854006D409E /* Renderable.swift */,
-				9ADE1F161EED0854006D409E /* Scene.swift */,
-				9ADE1F171EED0854006D409E /* ShaderProgram.swift */,
-				9ADE1F181EED0854006D409E /* Texture.swift */,
-				9ADE1F231EED0CE8006D409E /* Cube.swift */,
-			);
-			name = Common;
-			path = "../../../../Downloads/CocoaOpenGL-Swift-master";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +177,7 @@
 				9ADE1EC61EED062B006D409E /* LaunchScreen.storyboard in Resources */,
 				9ADE1ED21EED07F0006D409E /* shader.vs in Resources */,
 				9ADE1EC31EED062B006D409E /* Assets.xcassets in Resources */,
-				9ADE1F1C1EED0854006D409E /* normalmap.png in Resources */,
+				9A577D341F03B0AC0017F40F /* normalmap.png in Resources */,
 				9ADE1EC11EED062B006D409E /* Main.storyboard in Resources */,
 				9ADE1ED11EED07F0006D409E /* shader.fs in Resources */,
 			);
@@ -192,18 +191,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ADE1F2C1EED22F5006D409E /* RectangleElement.swift in Sources */,
-				9ADE1F1B1EED0854006D409E /* Matrix4.swift in Sources */,
+				9A577D371F03B0AC0017F40F /* ShaderProgram.swift in Sources */,
 				9ADE1EBC1EED062B006D409E /* AppDelegate.swift in Sources */,
-				9ADE1F1D1EED0854006D409E /* Renderable.swift in Sources */,
 				9ADE29421EEE9751000F21C9 /* Color.swift in Sources */,
-				9ADE1F1E1EED0854006D409E /* Scene.swift in Sources */,
-				9ADE1F1F1EED0854006D409E /* ShaderProgram.swift in Sources */,
-				9ADE1F241EED0CE8006D409E /* Cube.swift in Sources */,
+				9A577D351F03B0AC0017F40F /* Renderable.swift in Sources */,
+				9A577D321F03B0AC0017F40F /* Cylinder.swift in Sources */,
 				9ADE1ED01EED07F0006D409E /* MyGLKViewController.swift in Sources */,
-				9ADE1F201EED0854006D409E /* Texture.swift in Sources */,
 				9ADE1F281EED1BFD006D409E /* IsolineViewController.swift in Sources */,
-				9ADE1F1A1EED0854006D409E /* Cylinder.swift in Sources */,
+				9A577D311F03B0AC0017F40F /* Cube.swift in Sources */,
 				9ADE1F2A1EED1C36006D409E /* IsolineView.swift in Sources */,
+				9A577D331F03B0AC0017F40F /* Matrix4.swift in Sources */,
+				9A577D381F03B0AC0017F40F /* Texture.swift in Sources */,
+				9A577D361F03B0AC0017F40F /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
