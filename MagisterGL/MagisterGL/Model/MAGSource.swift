@@ -1,20 +1,25 @@
 //
-//  IsolineViewController.swift
+//  MAGSource.swift
 //  MagisterGL
 //
-//  Created by Хохлова Татьяна on 11.06.17.
+//  Created by Хохлова Татьяна on 23.09.17.
 //  Copyright © 2017 Хохлова Татьяна. All rights reserved.
 //
 
 import UIKit
 
-class IsolineViewController: UIViewController
+class MAGSource: NSObject
 {
-  @IBOutlet weak var isolineView: IsolineView!
-  
-  
-  private let kCountOfColorAreas: Int = 7
+  var elementsArray: [RectangleElement] = []
+  private let kCountOfColorAreas: Int = 100
   var rainbow = [Color]()
+  
+  override init()
+  {
+    super.init()
+    
+    createElementsArray()
+  }
   
   func generateColors(minValue: Double, maxValue: Double)
   {
@@ -66,10 +71,8 @@ class IsolineViewController: UIViewController
     return rainbow[i].color;
   }
   
-  override func viewDidLoad()
+  func createElementsArray ()
   {
-    super.viewDidLoad()
-    
     let xMin = 0.0
     let yMin = 0.0
     
@@ -112,18 +115,10 @@ class IsolineViewController: UIViewController
         element.topColorRight = getColorForU(u: uFunc(x: Double(x) + hX, y: Double(y)))
         element.bottomColorLeft = getColorForU(u: uFunc(x: Double(x), y: Double(y) + hY))
         element.bottomColorRight = getColorForU(u: uFunc(x: Double(x) + hX, y: Double(y) + hY))
-        elementsArray.append(element)
-        
+        elementsArray.append(element)        
       }
     }
-    isolineView.elementsArray = elementsArray
-    
-  }
-  
-  override func didReceiveMemoryWarning()
-  {
-    super.didReceiveMemoryWarning()
-    
+    self.elementsArray = elementsArray
   }
   
 }

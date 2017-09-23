@@ -23,12 +23,12 @@ class IsolineView: UIView
     {
       let squareFrame = CGRect(origin: rectangleElement.startPoint,
                                size: rectangleElement.size)
-      let topColor1 = rectangleElement.topColor1
-      let topColor2 = rectangleElement.topColor2
-      let bottomColor1 = rectangleElement.bottomColor1
-      let bottomColor2 = rectangleElement.bottomColor2
+      let topColorLeft = rectangleElement.topColorLeft
+      let topColorRight = rectangleElement.topColorRight
+      let bottomColorLeft = rectangleElement.bottomColorLeft
+      let bottomColorRight = rectangleElement.bottomColorRight
       
-      let gradientColors: Array <AnyObject> = [topColor1.cgColor, UIColor.clear.cgColor]
+      let gradientColors: Array <AnyObject> = [topColorLeft.cgColor, UIColor.clear.cgColor]
       let gradientLocations: Array <AnyObject> = [0.0 as AnyObject, 1.0 as AnyObject]
       let gradientLayer: CAGradientLayer = CAGradientLayer()
       gradientLayer.colors = gradientColors
@@ -36,7 +36,7 @@ class IsolineView: UIView
       gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
       gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
     
-      let gradientColors2: Array <AnyObject> = [bottomColor1.cgColor, UIColor.clear.cgColor]
+      let gradientColors2: Array <AnyObject> = [bottomColorLeft.cgColor, UIColor.clear.cgColor]
       let gradientLayer2: CAGradientLayer = CAGradientLayer()
       gradientLayer2.colors = gradientColors2
       gradientLayer2.locations = gradientLocations as? [NSNumber]
@@ -44,14 +44,14 @@ class IsolineView: UIView
       gradientLayer2.endPoint = CGPoint(x: 1.0, y: 0.0)
       
       
-      let gradientColors3: Array <AnyObject> = [UIColor.clear.cgColor, topColor2.cgColor]
+      let gradientColors3: Array <AnyObject> = [UIColor.clear.cgColor, topColorRight.cgColor]
       let gradientLayer3: CAGradientLayer = CAGradientLayer()
       gradientLayer3.colors = gradientColors3
       gradientLayer3.locations = gradientLocations as? [NSNumber]
       gradientLayer3.startPoint = CGPoint(x: 0.0, y: 1.0)
       gradientLayer3.endPoint = CGPoint(x: 1.0, y: 0.0)
       
-      let gradientColors4: Array <AnyObject> = [UIColor.clear.cgColor, bottomColor2.cgColor]
+      let gradientColors4: Array <AnyObject> = [UIColor.clear.cgColor, bottomColorRight.cgColor]
       let gradientLayer4: CAGradientLayer = CAGradientLayer()
       gradientLayer4.colors = gradientColors4
       gradientLayer4.locations = gradientLocations as? [NSNumber]

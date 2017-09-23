@@ -12,10 +12,10 @@ class RectangleElement
 {
   var startPoint: CGPoint = CGPoint.zero
   var size: CGSize = CGSize.zero
-  var topColor1: UIColor = UIColor.red
-  var topColor2: UIColor = UIColor.green
-  var bottomColor1: UIColor = UIColor.blue
-  var bottomColor2: UIColor = UIColor.cyan
+  var topColorLeft: UIColor = UIColor.red
+  var topColorRight: UIColor = UIColor.green
+  var bottomColorLeft: UIColor = UIColor.blue
+  var bottomColorRight: UIColor = UIColor.cyan
   
   init(startPoint: CGPoint,
        size: CGSize)
