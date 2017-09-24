@@ -10,14 +10,25 @@ import UIKit
 
 class MAGSource: NSObject
 {
+  var resourceContentSize : CGSize = CGSize.zero
   var elementsArray: [RectangleElement] = []
   private let kCountOfColorAreas: Int = 100
-  var rainbow = [Color]()
+  private var rainbow = [Color]()
+  
+  let xMin = 0.0
+  let yMin = 0.0
+  
+  let xMax = 130.0 * 6
+  let yMax = 80.0 * 6
+  
+  public let hX = 5.0 * 6
+  public let hY = 5.0 * 6
   
   override init()
   {
     super.init()
     
+    self.resourceContentSize = CGSize(width: xMax - xMin, height: yMax - yMin)
     createElementsArray()
   }
   
@@ -58,7 +69,7 @@ class MAGSource: NSObject
   func uFunc(x: Double,
              y: Double) -> Double
   {
-    return x / (y + 100)
+    return x*x + y*y
   }
   
   func getColorForU(u: Double) -> UIColor
@@ -73,14 +84,6 @@ class MAGSource: NSObject
   
   func createElementsArray ()
   {
-    let xMin = 0.0
-    let yMin = 0.0
-    
-    let xMax = 500.0
-    let yMax = 800.0
-    
-    let hX = 100.0
-    let hY = 100.0
     
     generateColors(minValue: uFunc(x: xMin, y: yMin),
                    maxValue: uFunc(x: xMax, y: yMax))
@@ -115,10 +118,11 @@ class MAGSource: NSObject
         element.topColorRight = getColorForU(u: uFunc(x: Double(x) + hX, y: Double(y)))
         element.bottomColorLeft = getColorForU(u: uFunc(x: Double(x), y: Double(y) + hY))
         element.bottomColorRight = getColorForU(u: uFunc(x: Double(x) + hX, y: Double(y) + hY))
-        elementsArray.append(element)        
+        elementsArray.append(element)
       }
     }
     self.elementsArray = elementsArray
   }
   
 }
+

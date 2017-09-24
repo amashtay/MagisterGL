@@ -16,7 +16,7 @@
 		9A577D371F03B0AC0017F40F /* ShaderProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A577D2F1F03B0AC0017F40F /* ShaderProgram.swift */; };
 		9A577D381F03B0AC0017F40F /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A577D301F03B0AC0017F40F /* Texture.swift */; };
 		9AB601A61F762993004C50AB /* MAGIsolineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB601A51F762993004C50AB /* MAGIsolineViewController.swift */; };
-		9AB601A91F762BF2004C50AB /* MAGIsolineScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB601A81F762BF2004C50AB /* MAGIsolineScene.swift */; };
+		9AB601A91F762BF2004C50AB /* MAGScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB601A81F762BF2004C50AB /* MAGScene.swift */; };
 		9AB601AC1F762F19004C50AB /* MAGSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB601AB1F762F19004C50AB /* MAGSource.swift */; };
 		9AB601AE1F7657A7004C50AB /* SKTexture+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB601AD1F7657A7004C50AB /* SKTexture+Gradient.swift */; };
 		9ADE1EBC1EED062B006D409E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1EBB1EED062B006D409E /* AppDelegate.swift */; };
@@ -42,9 +42,9 @@
 		9A577D2F1F03B0AC0017F40F /* ShaderProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderProgram.swift; sourceTree = "<group>"; };
 		9A577D301F03B0AC0017F40F /* Texture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
 		9AB601A51F762993004C50AB /* MAGIsolineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGIsolineViewController.swift; sourceTree = "<group>"; };
-		9AB601A81F762BF2004C50AB /* MAGIsolineScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGIsolineScene.swift; sourceTree = "<group>"; };
+		9AB601A81F762BF2004C50AB /* MAGScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGScene.swift; sourceTree = "<group>"; };
 		9AB601AB1F762F19004C50AB /* MAGSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGSource.swift; sourceTree = "<group>"; };
-		9AB601AD1F7657A7004C50AB /* SKTexture+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SKTexture+Gradient.swift"; path = "../Ext/SKTexture+Gradient.swift"; sourceTree = "<group>"; };
+		9AB601AD1F7657A7004C50AB /* SKTexture+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTexture+Gradient.swift"; sourceTree = "<group>"; };
 		9ADE1EB81EED062B006D409E /* MagisterGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagisterGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADE1EBB1EED062B006D409E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ADE1EC01EED062B006D409E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		9AB601A71F762998004C50AB /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9AB601A81F762BF2004C50AB /* MAGIsolineScene.swift */,
+				9AB601A81F762BF2004C50AB /* MAGScene.swift */,
 				9AB601A51F762993004C50AB /* MAGIsolineViewController.swift */,
 			);
 			path = UI;
@@ -109,8 +109,7 @@
 			children = (
 				9AB601AD1F7657A7004C50AB /* SKTexture+Gradient.swift */,
 			);
-			name = Ext;
-			path = "New Group";
+			path = Ext;
 			sourceTree = "<group>";
 		};
 		9ADE1EAF1EED062B006D409E = {
@@ -228,7 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AB601AC1F762F19004C50AB /* MAGSource.swift in Sources */,
-				9AB601A91F762BF2004C50AB /* MAGIsolineScene.swift in Sources */,
+				9AB601A91F762BF2004C50AB /* MAGScene.swift in Sources */,
 				9ADE1F2C1EED22F5006D409E /* RectangleElement.swift in Sources */,
 				9A577D371F03B0AC0017F40F /* ShaderProgram.swift in Sources */,
 				9ADE1EBC1EED062B006D409E /* AppDelegate.swift in Sources */,

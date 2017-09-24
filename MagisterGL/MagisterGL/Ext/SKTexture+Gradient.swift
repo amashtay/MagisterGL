@@ -35,15 +35,15 @@ extension SKTexture
                            bottomColorRight.components[0], bottomColorRight.components[1], bottomColorRight.components[2], bottomColorRight.components[3]]
     let grad1 = CGGradient(colorSpace: colorSpace, colorComponents: col1, locations: nil, count: 2)
     currentContext?.drawLinearGradient(grad1!,
-                                       start: CGPoint(x: 0, y: 0),
-                                       end: CGPoint(x: size.width, y: size.height),
+                                       start: CGPoint(x: 0, y: size.height),
+                                       end: CGPoint(x: size.width, y: 0),
                                        options: [])
     let col2: [CGFloat] = [bottomColorLeft.components[0], bottomColorLeft.components[1], bottomColorLeft.components[2], bottomColorLeft.components[3],
                            topColorRight.components[0], topColorRight.components[1], topColorRight.components[2], topColorRight.components[3]]
     let grad2 = CGGradient(colorSpace: colorSpace, colorComponents: col2, locations: nil, count: 2)
     currentContext?.drawLinearGradient(grad2!,
-                                       start: CGPoint(x: 0, y: size.height),
-                                       end: CGPoint(x: size.width, y: 0),
+                                       start: CGPoint(x: 0, y: 0),
+                                       end: CGPoint(x: size.width, y: size.height),
                                        options: [])
     
     let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -56,7 +56,7 @@ extension SKTexture
   convenience init(size: CGSize,
                    color1: CIColor,
                    color2: CIColor,
-                   direction:GradientDirection = .up)
+                   direction: GradientDirection = .up)
   {
     let coreImageContext = CIContext(options: nil)
     let gradientFilter = CIFilter(name: "CILinearGradient")
@@ -89,3 +89,4 @@ extension SKTexture
     self.init(cgImage: cgimg!)
   }
 }
+
