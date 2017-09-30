@@ -30,6 +30,8 @@
 		9ADE1F2A1EED1C36006D409E /* IsolineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F291EED1C36006D409E /* IsolineView.swift */; };
 		9ADE1F2C1EED22F5006D409E /* RectangleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE1F2B1EED22F5006D409E /* RectangleElement.swift */; };
 		9ADE29421EEE9751000F21C9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE29411EEE9751000F21C9 /* Color.swift */; };
+		9AF322EA1F7A7FE4003AE463 /* MAG3DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF322E91F7A7FE4003AE463 /* MAG3DViewController.swift */; };
+		9AF322EC1F7A8054003AE463 /* CustomGeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF322EB1F7A8054003AE463 /* CustomGeometryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		9ADE1F291EED1C36006D409E /* IsolineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsolineView.swift; sourceTree = "<group>"; };
 		9ADE1F2B1EED22F5006D409E /* RectangleElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleElement.swift; sourceTree = "<group>"; };
 		9ADE29411EEE9751000F21C9 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		9AF322E91F7A7FE4003AE463 /* MAG3DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAG3DViewController.swift; sourceTree = "<group>"; };
+		9AF322EB1F7A8054003AE463 /* CustomGeometryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGeometryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +93,8 @@
 		9AB601A71F762998004C50AB /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9AB601A81F762BF2004C50AB /* MAGScene.swift */,
-				9AB601A51F762993004C50AB /* MAGIsolineViewController.swift */,
+				9AF322E81F7A7F3A003AE463 /* 3D */,
+				9AF322E71F7A7F0E003AE463 /* 2d */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -148,6 +152,24 @@
 				9AB601A71F762998004C50AB /* UI */,
 			);
 			path = MagisterGL;
+			sourceTree = "<group>";
+		};
+		9AF322E71F7A7F0E003AE463 /* 2d */ = {
+			isa = PBXGroup;
+			children = (
+				9AB601A81F762BF2004C50AB /* MAGScene.swift */,
+				9AB601A51F762993004C50AB /* MAGIsolineViewController.swift */,
+			);
+			path = 2d;
+			sourceTree = "<group>";
+		};
+		9AF322E81F7A7F3A003AE463 /* 3D */ = {
+			isa = PBXGroup;
+			children = (
+				9AF322E91F7A7FE4003AE463 /* MAG3DViewController.swift */,
+				9AF322EB1F7A8054003AE463 /* CustomGeometryView.swift */,
+			);
+			path = 3D;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AB601AC1F762F19004C50AB /* MAGSource.swift in Sources */,
+				9AF322EA1F7A7FE4003AE463 /* MAG3DViewController.swift in Sources */,
 				9AB601A91F762BF2004C50AB /* MAGScene.swift in Sources */,
 				9ADE1F2C1EED22F5006D409E /* RectangleElement.swift in Sources */,
 				9A577D371F03B0AC0017F40F /* ShaderProgram.swift in Sources */,
@@ -238,6 +261,7 @@
 				9ADE1ED01EED07F0006D409E /* MyGLKViewController.swift in Sources */,
 				9ADE1F281EED1BFD006D409E /* IsolineViewController.swift in Sources */,
 				9A577D311F03B0AC0017F40F /* Cube.swift in Sources */,
+				9AF322EC1F7A8054003AE463 /* CustomGeometryView.swift in Sources */,
 				9ADE1F2A1EED1C36006D409E /* IsolineView.swift in Sources */,
 				9AB601AE1F7657A7004C50AB /* SKTexture+Gradient.swift in Sources */,
 				9A577D331F03B0AC0017F40F /* Matrix4.swift in Sources */,

@@ -46,17 +46,28 @@
                                     <segue destination="Suq-Gg-DZ5" kind="show" id="bVI-r1-YAM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zga-fc-SN5">
+                                <rect key="frame" x="37" y="493.5" width="300" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="fc5-rN-1wo" kind="show" id="IL6-Zy-1em"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PlZ-xa-Jtc" firstAttribute="top" secondItem="h1W-TQ-p5K" secondAttribute="bottom" constant="20" id="7co-VP-GIZ"/>
+                            <constraint firstItem="Zga-fc-SN5" firstAttribute="height" secondItem="PlZ-xa-Jtc" secondAttribute="height" id="HIv-cu-WeV"/>
                             <constraint firstItem="h1W-TQ-p5K" firstAttribute="top" secondItem="6hh-Uw-tZf" secondAttribute="bottom" constant="20" id="HJ0-Ke-r4E"/>
+                            <constraint firstItem="Zga-fc-SN5" firstAttribute="top" secondItem="PlZ-xa-Jtc" secondAttribute="bottom" constant="10" id="I98-Nh-1YL"/>
                             <constraint firstItem="PlZ-xa-Jtc" firstAttribute="height" secondItem="h1W-TQ-p5K" secondAttribute="height" id="Iai-JS-Bn6"/>
                             <constraint firstItem="PlZ-xa-Jtc" firstAttribute="centerX" secondItem="ThC-U8-ezt" secondAttribute="centerX" id="NXS-GH-nPK"/>
+                            <constraint firstItem="Zga-fc-SN5" firstAttribute="width" secondItem="PlZ-xa-Jtc" secondAttribute="width" id="Qpa-iT-DXg"/>
                             <constraint firstItem="h1W-TQ-p5K" firstAttribute="centerX" secondItem="ThC-U8-ezt" secondAttribute="centerX" id="R8H-5X-BQz"/>
                             <constraint firstItem="h1W-TQ-p5K" firstAttribute="height" secondItem="6hh-Uw-tZf" secondAttribute="height" id="SdA-Jn-lRu"/>
                             <constraint firstItem="6hh-Uw-tZf" firstAttribute="centerY" secondItem="ThC-U8-ezt" secondAttribute="centerY" id="XcC-DW-XYx"/>
                             <constraint firstItem="h1W-TQ-p5K" firstAttribute="width" secondItem="6hh-Uw-tZf" secondAttribute="width" id="bKM-g2-7Yp"/>
+                            <constraint firstItem="Zga-fc-SN5" firstAttribute="centerX" secondItem="ThC-U8-ezt" secondAttribute="centerX" id="bS5-kp-enL"/>
                             <constraint firstItem="6hh-Uw-tZf" firstAttribute="centerX" secondItem="ThC-U8-ezt" secondAttribute="centerX" id="hgi-wX-oBQ"/>
                             <constraint firstItem="PlZ-xa-Jtc" firstAttribute="width" secondItem="h1W-TQ-p5K" secondAttribute="width" id="zSv-nq-NOS"/>
                         </constraints>
@@ -137,6 +148,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btf-kk-I7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-423" y="940"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BAt-HF-GMA">
+            <objects>
+                <viewController id="fc5-rN-1wo" customClass="MAG3DViewController" customModule="MagisterGL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8sy-F7-irp"/>
+                        <viewControllerLayoutGuide type="bottom" id="zCg-JB-xlA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zK3-8f-F0h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-Da-mv5" customClass="CustomGeometryView" customModule="MagisterGL" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </sceneKitView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zCg-JB-xlA" firstAttribute="top" secondItem="Lyg-Da-mv5" secondAttribute="bottom" id="3I4-GK-Zr6"/>
+                            <constraint firstAttribute="trailing" secondItem="Lyg-Da-mv5" secondAttribute="trailing" id="Rr1-KZ-vl5"/>
+                            <constraint firstItem="Lyg-Da-mv5" firstAttribute="leading" secondItem="zK3-8f-F0h" secondAttribute="leading" id="szi-Bs-Avt"/>
+                            <constraint firstItem="Lyg-Da-mv5" firstAttribute="top" secondItem="8sy-F7-irp" secondAttribute="bottom" id="w8i-VH-BgP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgB-Av-xWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2305" y="1431"/>
         </scene>
         <!--Isoline View Controller-->
         <scene sceneID="RfX-5Q-HxF">
