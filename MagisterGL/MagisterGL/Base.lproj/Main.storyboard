@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="a9V-BR-1rW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fc5-rN-1wo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,21 +33,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1W-TQ-p5K">
-                                <rect key="frame" x="37" y="375.5" width="300" height="44"/>
+                                <rect key="frame" x="37.5" y="375.5" width="300" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="m7l-ZR-Ljp" kind="show" id="e0a-Yb-lh6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlZ-xa-Jtc">
-                                <rect key="frame" x="37" y="439.5" width="300" height="44"/>
+                                <rect key="frame" x="37.5" y="439.5" width="300" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="Suq-Gg-DZ5" kind="show" id="bVI-r1-YAM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zga-fc-SN5">
-                                <rect key="frame" x="37" y="493.5" width="300" height="44"/>
+                                <rect key="frame" x="37.5" y="493.5" width="300" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="fc5-rN-1wo" kind="show" id="IL6-Zy-1em"/>
@@ -161,7 +161,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-Da-mv5" customClass="CustomGeometryView" customModule="MagisterGL" customModuleProvider="target">
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-Da-mv5" customClass="MAGCustomGeometryView" customModule="MagisterGL" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </sceneKitView>
                         </subviews>
