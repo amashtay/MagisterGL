@@ -21,22 +21,46 @@ class MAGFileManager: NSObject
     {
         do
         {
-            let data = try String(contentsOfFile: path,
-                                  encoding: String.Encoding.ascii)
-            var arrayOfVectors: [SCNVector3]? = []
-            for string in data.components(separatedBy: "\n")
+            let fileExtension = URL.init(fileURLWithPath: path).pathExtension
+            if  fileExtension == "dat"
             {
-                if string != ""
+                let scaner = try MAGBinaryDataScanner.init(data: NSData.init(contentsOfFile: path),
+                                                           littleEndian: true,
+                                                           encoding: String.Encoding.ascii)
+                var arrayOfVectors: [SCNVector3]? = []
+                var array: [Float64]? = []
+                while let value = scaner.readDouble()
                 {
-                    let array = string.components(separatedBy: " ").map { Float($0)! }
-                    if array.count == 3
+                    array?.append(value)
+                    if array?.count == 3
                     {
-                        let vector = SCNVector3Make(array[0], array[1], array[2])
+                        let vector = SCNVector3Make(Float(array![0]), Float(array![1]), Float(array![2]))
                         arrayOfVectors?.append(vector)
+                        array = []
                     }
                 }
+                return arrayOfVectors!
             }
-            return arrayOfVectors!
+            else
+            {
+                let data = try String(contentsOfFile: path,
+                                      encoding: String.Encoding.ascii)
+                var arrayOfVectors: [SCNVector3]? = []
+                for string in data.components(separatedBy: "\n")
+                {
+                    if string != ""
+                    {
+                        let array = string.components(separatedBy: " ").map { Float($0)! }
+                        if array.count == 3
+                        {
+                            let vector = SCNVector3Make(array[0], array[1], array[2])
+                            arrayOfVectors?.append(vector)
+                        }
+                    }
+                }
+                return arrayOfVectors!
+                
+            }
         }
         catch let err as NSError
         {
@@ -60,6 +84,10 @@ class MAGFileManager: NSObject
             path = Bundle.main.path(forResource: "xyz2",
                                     ofType: "txt")!
             break;
+        case 2:
+            path = Bundle.main.path(forResource: "xyz",
+                                    ofType: "dat")!
+            break;
         default:
             path = Bundle.main.path(forResource: "xyz",
                                     ofType: "txt")!
@@ -82,6 +110,10 @@ class MAGFileManager: NSObject
             path = Bundle.main.path(forResource: "nver2",
                                     ofType: "txt")!
             break;
+        case 2:
+            path = Bundle.main.path(forResource: "nver",
+                                    ofType: "dat")!
+            break;
         default:
             path = Bundle.main.path(forResource: "nver",
                                     ofType: "txt")!
@@ -90,22 +122,45 @@ class MAGFileManager: NSObject
         return self.getNVERArray(path: path)
     }
     
+    
     func getNVERArray(path: String) -> [[Int]]
     {
         do
         {
-            let data = try String(contentsOfFile: path,
-                                  encoding: String.Encoding.utf8)
-            var arrayOfVectors: [[Int]]? = []
-            for string in data.components(separatedBy: "\n")
+            let fileExtension = URL.init(fileURLWithPath: path).pathExtension
+            if  fileExtension == "dat"
             {
-                if string != ""
+                let scaner = try MAGBinaryDataScanner.init(data: NSData.init(contentsOfFile: path),
+                                                           littleEndian: true,
+                                                           encoding: String.Encoding.ascii)
+                var arrayOfVectors: [[Int]]? = []
+                var array: [Int]? = []
+                while let value = scaner.read32()
                 {
-                    let array = string.components(separatedBy: " ").map { Int($0)!}
-                    arrayOfVectors?.append(array)
+                    array?.append(Int(value))
+                    if array?.count == 14
+                    {
+                        arrayOfVectors?.append(array!)
+                        array = []
+                    }
                 }
+                return arrayOfVectors!
             }
-            return arrayOfVectors!
+            else
+            {
+                let data = try String(contentsOfFile: path,
+                                      encoding: String.Encoding.ascii)
+                var arrayOfVectors: [[Int]]? = []
+                for string in data.components(separatedBy: "\n")
+                {
+                    if string != ""
+                    {
+                        let array = string.components(separatedBy: " ").map { Int($0)!}
+                        arrayOfVectors?.append(array)
+                    }
+                }
+                return arrayOfVectors!
+            }
         }
         catch let err as NSError
         {
@@ -114,5 +169,4 @@ class MAGFileManager: NSObject
         }
         return []
     }
-    
 }

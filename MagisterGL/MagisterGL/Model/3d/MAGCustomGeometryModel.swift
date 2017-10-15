@@ -42,6 +42,8 @@ class MAGCustomGeometryModel: NSObject
     }
     let minVector = xyzArray.first
     let maxVector = xyzArray.last
-    centerPoint = SCNVector3Make(((maxVector?.x)! - (minVector?.x)!) / 2.0, ((maxVector?.y)! - (minVector?.y)!) / 2.0, ((maxVector?.z)! - (minVector?.z)!) / 2.0)
+    centerPoint = SCNVector3Make(((maxVector?.x)! - (minVector?.x)!) / 2.0 + (minVector?.x)!,
+                                 ((maxVector?.y)! - (minVector?.y)!) / 2.0 + (minVector?.y)!,
+                                 ((maxVector?.z)! - (minVector?.z)!) / 2.0 + (minVector?.z)!)
   }
 }
