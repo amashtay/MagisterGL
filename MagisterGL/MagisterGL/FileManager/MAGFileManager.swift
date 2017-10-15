@@ -20,21 +20,21 @@ class MAGFileManager: NSObject
     do
     {
       if let path = Bundle.main.path(forResource: "xyz",
-                                     ofType: "txt")
+                                     ofType: "dat")
       {
-        let data = try String(contentsOfFile: path,
-                              encoding: String.Encoding.ascii)
+        let scaner = try MAGBinaryDataScanner.init(data: NSData.init(contentsOfFile: path),
+                                  littleEndian: true,
+                                  encoding: String.Encoding.ascii)
         var arrayOfVectors: [SCNVector3]? = []
-        for string in data.components(separatedBy: "\n")
+        var array: [Float64]? = []
+        while let value = scaner.readDouble()
         {
-          if string != ""
+          array?.append(value)
+          if array?.count == 3
           {
-            let array = string.components(separatedBy: " ").map { Float($0)!}
-            if array.count == 3
-            {
-              let vector = SCNVector3Make(array[0], array[1], array[2])
-              arrayOfVectors?.append(vector)
-            }
+            let vector = SCNVector3Make(Float(array![0]), Float(array![1]), Float(array![2]))
+            arrayOfVectors?.append(vector)
+            array = []
           }
         }
         return arrayOfVectors!
@@ -48,22 +48,26 @@ class MAGFileManager: NSObject
     return []
   }
   
+  
   func getNVERArray() -> [[Int]]
   {
     do
     {
       if let path = Bundle.main.path(forResource: "nver",
-                                     ofType: "txt")
+                                     ofType: "dat")
       {
-        let data = try String(contentsOfFile: path,
-                              encoding: String.Encoding.utf8)
+        let scaner = try MAGBinaryDataScanner.init(data: NSData.init(contentsOfFile: path),
+                                                   littleEndian: true,
+                                                   encoding: String.Encoding.ascii)
         var arrayOfVectors: [[Int]]? = []
-        for string in data.components(separatedBy: "\n")
+        var array: [Int]? = []
+        while let value = scaner.read32()
         {
-          if string != ""
+          array?.append(Int(value))
+          if array?.count == 14
           {
-            let array = string.components(separatedBy: " ").map { Int($0)!}
-            arrayOfVectors?.append(array)
+            arrayOfVectors?.append(array!)
+            array = []
           }
         }
         return arrayOfVectors!
