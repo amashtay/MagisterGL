@@ -14,6 +14,7 @@ import SceneKit
 class MAGCustomGeometryModel: NSObject
 {
   var elementsArray: [MAGHexahedron] = []
+  var centerPoint: SCNVector3 = SCNVector3Zero
     
   override init()
   {
@@ -24,7 +25,7 @@ class MAGCustomGeometryModel: NSObject
   
   func createElementsArray ()
   {
-    let xyxArray = MAGFileManager.sharedInstance.getXYZArray()
+    let xyzArray = MAGFileManager.sharedInstance.getXYZArray()
     let nverArray = MAGFileManager.sharedInstance.getNVERArray()
     for nverElementArray in nverArray
     {
@@ -33,11 +34,14 @@ class MAGCustomGeometryModel: NSObject
       {
         if gridNum != 0
         {
-          let vector = xyxArray[gridNum - 1]
+          let vector = xyzArray[gridNum - 1]
           positionArray?.append(vector)
         }
       }
       elementsArray.append(MAGHexahedron.init(positions: positionArray!))
     }
+    let minVector = xyzArray.first
+    let maxVector = xyzArray.last
+    centerPoint = SCNVector3Make(((maxVector?.x)! - (minVector?.x)!) / 2.0, ((maxVector?.y)! - (minVector?.y)!) / 2.0, ((maxVector?.z)! - (minVector?.z)!) / 2.0)
   }
 }

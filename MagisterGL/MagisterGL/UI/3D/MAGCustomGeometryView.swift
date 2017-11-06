@@ -32,12 +32,12 @@ class MAGCustomGeometryView: SCNView
     
     // Create a camera and attach it to a node
     let camera = SCNCamera()
-    camera.xFov = 10
-    camera.yFov = 45
+    //camera.xFov = 10
+    //camera.yFov = 45
     
     let cameraNode = SCNNode()
     cameraNode.camera = camera
-    cameraNode.position = SCNVector3(0, 0, 50)
+    cameraNode.position = SCNVector3(self.model.centerPoint.x, self.model.centerPoint.y, self.model.centerPoint.z + 10)
     scene.rootNode.addChildNode(cameraNode)
     
     self.allowsCameraControl = true
@@ -49,6 +49,8 @@ class MAGCustomGeometryView: SCNView
     ambientLightNode.light?.type = .ambient
     ambientLightNode.light?.color = UIColor.darkGray
     scene.rootNode.addChildNode(ambientLightNode)
+    
+    scene.rootNode.pivot = SCNMatrix4MakeTranslation(self.model.centerPoint.x, self.model.centerPoint.y, self.model.centerPoint.z)
     
     self.scene = scene
     createCube()
