@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84541B071FB069BD00DC6E43 /* MAGChooseFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84541B061FB069BD00DC6E43 /* MAGChooseFileViewController.swift */; };
+		84541B0D1FB0AD2300DC6E43 /* elem_neib2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84541B091FB0AD2300DC6E43 /* elem_neib2.txt */; };
+		84541B0E1FB0AD2300DC6E43 /* xyz2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84541B0A1FB0AD2300DC6E43 /* xyz2.txt */; };
+		84541B0F1FB0AD2300DC6E43 /* nver2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84541B0B1FB0AD2300DC6E43 /* nver2.txt */; };
+		84541B101FB0AD2300DC6E43 /* nvkat2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84541B0C1FB0AD2300DC6E43 /* nvkat2.txt */; };
 		9A577D311F03B0AC0017F40F /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A577D291F03B0AC0017F40F /* Cube.swift */; };
 		9A577D321F03B0AC0017F40F /* Cylinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A577D2A1F03B0AC0017F40F /* Cylinder.swift */; };
 		9A577D331F03B0AC0017F40F /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A577D2B1F03B0AC0017F40F /* Matrix4.swift */; };
@@ -47,6 +52,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84541B061FB069BD00DC6E43 /* MAGChooseFileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAGChooseFileViewController.swift; sourceTree = "<group>"; };
+		84541B091FB0AD2300DC6E43 /* elem_neib2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = elem_neib2.txt; sourceTree = "<group>"; };
+		84541B0A1FB0AD2300DC6E43 /* xyz2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xyz2.txt; sourceTree = "<group>"; };
+		84541B0B1FB0AD2300DC6E43 /* nver2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nver2.txt; sourceTree = "<group>"; };
+		84541B0C1FB0AD2300DC6E43 /* nvkat2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nvkat2.txt; sourceTree = "<group>"; };
 		9A577D291F03B0AC0017F40F /* Cube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
 		9A577D2A1F03B0AC0017F40F /* Cylinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cylinder.swift; sourceTree = "<group>"; };
 		9A577D2B1F03B0AC0017F40F /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4.swift; sourceTree = "<group>"; };
@@ -101,6 +111,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84541B081FB0AB2900DC6E43 /* Test2 */ = {
+			isa = PBXGroup;
+			children = (
+				84541B091FB0AD2300DC6E43 /* elem_neib2.txt */,
+				84541B0B1FB0AD2300DC6E43 /* nver2.txt */,
+				84541B0C1FB0AD2300DC6E43 /* nvkat2.txt */,
+				84541B0A1FB0AD2300DC6E43 /* xyz2.txt */,
+			);
+			path = Test2;
+			sourceTree = "<group>";
+		};
 		9A577D281F03B0AC0017F40F /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +142,7 @@
 			children = (
 				9AF322E81F7A7F3A003AE463 /* 3D */,
 				9AF322E71F7A7F0E003AE463 /* 2d */,
+				84541B061FB069BD00DC6E43 /* MAGChooseFileViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -185,8 +207,9 @@
 		9AE6155C1F89FCDC0067893C /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				9AE615711F8A09FB0067893C /* Test2 */,
-				9AE615661F89FD900067893C /* Test1 */,
+				84541B081FB0AB2900DC6E43 /* Test2 */,
+				9AE615711F8A09FB0067893C /* Test1 */,
+				9AE615661F89FD900067893C /* Test0 */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -212,13 +235,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9AE615661F89FD900067893C /* Test1 */ = {
+		9AE615661F89FD900067893C /* Test0 */ = {
 			isa = PBXGroup;
 			children = (
 				9AE6155D1F89FCE80067893C /* Grid */,
 				9AE615631F89FCE80067893C /* Model */,
 			);
-			path = Test1;
+			path = Test0;
 			sourceTree = "<group>";
 		};
 		9AE615671F8A004C0067893C /* FileManager */ = {
@@ -247,7 +270,7 @@
 			path = 3d;
 			sourceTree = "<group>";
 		};
-		9AE615711F8A09FB0067893C /* Test2 */ = {
+		9AE615711F8A09FB0067893C /* Test1 */ = {
 			isa = PBXGroup;
 			children = (
 				9AE615721F8A0A0D0067893C /* elem_neib.txt */,
@@ -255,7 +278,7 @@
 				9AE615751F8A0A0E0067893C /* nvkat.txt */,
 				9AE615731F8A0A0D0067893C /* xyz.txt */,
 			);
-			path = Test2;
+			path = Test1;
 			sourceTree = "<group>";
 		};
 		9AF322E71F7A7F0E003AE463 /* 2d */ = {
@@ -336,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84541B0F1FB0AD2300DC6E43 /* nver2.txt in Resources */,
 				9AE6157A1F8A1A920067893C /* elem_neib in Resources */,
 				9AE6157B1F8A1A920067893C /* inftry.dat in Resources */,
 				9AE6157C1F8A1A920067893C /* nver.dat in Resources */,
@@ -344,12 +368,15 @@
 				9AE615761F8A10FF0067893C /* elem_neib.txt in Resources */,
 				9AE615771F8A10FF0067893C /* nver.txt in Resources */,
 				9AE615781F8A10FF0067893C /* nvkat.txt in Resources */,
+				84541B0E1FB0AD2300DC6E43 /* xyz2.txt in Resources */,
 				9AE615791F8A10FF0067893C /* xyz.txt in Resources */,
 				9ADE1EC61EED062B006D409E /* LaunchScreen.storyboard in Resources */,
 				9ADE1ED21EED07F0006D409E /* shader.vs in Resources */,
 				9ADE1EC31EED062B006D409E /* Assets.xcassets in Resources */,
 				9A577D341F03B0AC0017F40F /* normalmap.png in Resources */,
 				9ADE1EC11EED062B006D409E /* Main.storyboard in Resources */,
+				84541B101FB0AD2300DC6E43 /* nvkat2.txt in Resources */,
+				84541B0D1FB0AD2300DC6E43 /* elem_neib2.txt in Resources */,
 				9ADE1ED11EED07F0006D409E /* shader.fs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +407,7 @@
 				9AE615701F8A07250067893C /* MAGCustomGeometryModel.swift in Sources */,
 				9AB601AE1F7657A7004C50AB /* SKTexture+Gradient.swift in Sources */,
 				9A577D331F03B0AC0017F40F /* Matrix4.swift in Sources */,
+				84541B071FB069BD00DC6E43 /* MAGChooseFileViewController.swift in Sources */,
 				9A577D381F03B0AC0017F40F /* Texture.swift in Sources */,
 				9AE6156E1F8A03B00067893C /* MAGHexahedron.swift in Sources */,
 				9A577D361F03B0AC0017F40F /* Scene.swift in Sources */,

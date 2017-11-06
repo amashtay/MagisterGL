@@ -11,13 +11,31 @@ import UIKit
 import SceneKit
 
 
-class MAG3DViewController: UIViewController
+class MAG3DViewController: UIViewController, UIPopoverPresentationControllerDelegate
+
 {
   
+    @IBOutlet weak var customGeometryView: MAGCustomGeometryView!
+    
   override func viewDidLoad()
   {
     super.viewDidLoad()
     
   }
-  
+    
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?)
+    {
+        super.prepare(for: segue,
+                      sender: sender)
+        if segue.destination.isKind(of: MAGChooseFileViewController.self)
+        {
+            segue.destination.popoverPresentationController?.delegate = self;
+        }
+    }
+    
+    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController)
+    {
+        self.customGeometryView.redraw()
+    }
 }
