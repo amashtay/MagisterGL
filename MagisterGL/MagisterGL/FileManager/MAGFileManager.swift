@@ -34,7 +34,9 @@ class MAGFileManager: NSObject
                     array?.append(value)
                     if array?.count == 3
                     {
-                        let vector = SCNVector3Make(Float(array![0]), Float(array![1]), Float(array![2]))
+                        let vector = SCNVector3Make(Float(array![0]),
+                                                    Float(array![1]),
+                                                    Float(array![2]))
                         arrayOfVectors?.append(vector)
                         array = []
                     }
@@ -53,7 +55,9 @@ class MAGFileManager: NSObject
                         let array = string.components(separatedBy: " ").map { Float($0)! }
                         if array.count == 3
                         {
-                            let vector = SCNVector3Make(array[0], array[1], array[2])
+                            let vector = SCNVector3Make(array[0],
+                                                        array[1],
+                                                        array[2])
                             arrayOfVectors?.append(vector)
                         }
                     }

@@ -11,13 +11,32 @@ import UIKit
 import SceneKit
 
 
+extension SCNNode
+{
+    func cleanup()
+    {
+        for child in childNodes
+        {
+            child.cleanup()
+        }
+        geometry = nil
+    }
+}
+
+
 class MAGCustomGeometryView: SCNView
 {
     private var model: MAGCustomGeometryModel = MAGCustomGeometryModel.init()
     
+    deinit
+    {
+        scene?.rootNode.cleanup()
+    }
+    
     
     public func redraw()
-    {        
+    {
+        scene?.rootNode.cleanup()
         setupScene()
     }
     
@@ -44,7 +63,9 @@ class MAGCustomGeometryView: SCNView
         
         let cameraNode = SCNNode()
         cameraNode.camera = camera
-        cameraNode.position = SCNVector3(self.model.centerPoint.x, self.model.centerPoint.y, self.model.centerPoint.z + 10)
+        cameraNode.position = SCNVector3(self.model.centerPoint.x,
+                                         self.model.centerPoint.y,
+                                         self.model.centerPoint.z + (self.model.maxVector.z - self.model.minVector.z) / 2.0 + 10)
         scene.rootNode.addChildNode(cameraNode)
         
         self.allowsCameraControl = true
@@ -57,7 +78,9 @@ class MAGCustomGeometryView: SCNView
         ambientLightNode.light?.color = UIColor.darkGray
         scene.rootNode.addChildNode(ambientLightNode)
         
-        scene.rootNode.pivot = SCNMatrix4MakeTranslation(self.model.centerPoint.x, self.model.centerPoint.y, self.model.centerPoint.z)
+        scene.rootNode.pivot = SCNMatrix4MakeTranslation(self.model.centerPoint.x,
+                                                         self.model.centerPoint.y,
+                                                         self.model.centerPoint.z)
         
         self.scene = scene
         createCube()
@@ -67,6 +90,108 @@ class MAGCustomGeometryView: SCNView
     {
         for hexahedron in self.model.elementsArray
         {
+            var needToDraw = false
+            if hexahedron.positions[0].y == self.model.minVector.y
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[1].y == self.model.minVector.y
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[4].y == self.model.minVector.y
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[5].y == self.model.minVector.y
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[2].y == self.model.maxVector.y
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[6].y == self.model.maxVector.y
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[7].y == self.model.maxVector.y
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[3].y == self.model.maxVector.y
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[0].z == self.model.minVector.z
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[1].z == self.model.minVector.z
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[2].z == self.model.minVector.z
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[3].z == self.model.minVector.z
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[4].z == self.model.maxVector.z
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[5].z == self.model.maxVector.z
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[6].z == self.model.maxVector.z
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[7].z == self.model.maxVector.z
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[0].x == self.model.minVector.x
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[2].x == self.model.minVector.x
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[4].x == self.model.minVector.x
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[6].x == self.model.minVector.x
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[1].x == self.model.maxVector.x
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[3].x == self.model.maxVector.x
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[5].x == self.model.maxVector.x
+            {
+                needToDraw = true
+            }
+            else if hexahedron.positions[7].x == self.model.maxVector.x
+            {
+                needToDraw = true
+            }
+            
+            if !needToDraw
+            {
+                continue
+            }
             let positions = hexahedron.positions + hexahedron.positions + hexahedron.positions
             let normals = [
                 SCNVector3Make( 0, -1, 0),
@@ -132,7 +257,10 @@ class MAGCustomGeometryView: SCNView
                                              bytesPerIndex: MemoryLayout<CInt>.size)
             let geometry = SCNGeometry(sources: [vertexSource, normalSource],
                                        elements: [element])
-            geometry.firstMaterial?.diffuse.contents = UIColor(red: 0.149, green: 0.604, blue: 0.859, alpha: 1.0)
+            geometry.firstMaterial?.diffuse.contents = UIColor(red: 0.149,
+                                                               green: 0.604,
+                                                               blue: 0.859,
+                                                               alpha: 1.0)
             let cubeNode = SCNNode(geometry: geometry)
             self.scene?.rootNode.addChildNode(cubeNode)
             
