@@ -147,10 +147,8 @@ class MAGCustomGeometryView: SCNView
                 4, 5, 6,
                 5, 7, 6] as [CInt]
             
-            let vertexSource = SCNGeometrySource(vertices: positions,
-                                                 count: 24)
-            let normalSource = SCNGeometrySource(normals: normals,
-                                                 count: 24)
+            let vertexSource = SCNGeometrySource(vertices: positions)
+            let normalSource = SCNGeometrySource(normals: normals)
             let indexData = Data(bytes: indices,
                                  count: MemoryLayout<CInt>.size * indices.count)
             let element = SCNGeometryElement(data: indexData,

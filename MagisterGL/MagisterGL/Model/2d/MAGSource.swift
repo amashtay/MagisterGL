@@ -114,10 +114,10 @@ class MAGSource: NSObject
                                                            y: y.doubleValue),
                                        size: CGSize(width: hX,
                                                     height: hY))
-        element.topColorLeft = getColorForU(u: uFunc(x: Double(x), y: Double(y)))
-        element.topColorRight = getColorForU(u: uFunc(x: Double(x) + hX, y: Double(y)))
-        element.bottomColorLeft = getColorForU(u: uFunc(x: Double(x), y: Double(y) + hY))
-        element.bottomColorRight = getColorForU(u: uFunc(x: Double(x) + hX, y: Double(y) + hY))
+        element.topColorLeft = getColorForU(u: uFunc(x: Double(truncating: x), y: Double(truncating: y)))
+        element.topColorRight = getColorForU(u: uFunc(x: Double(truncating: x) + hX, y: Double(truncating: y)))
+        element.bottomColorLeft = getColorForU(u: uFunc(x: Double(truncating: x), y: Double(truncating: y) + hY))
+        element.bottomColorRight = getColorForU(u: uFunc(x: Double(truncating: x) + hX, y: Double(truncating: y) + hY))
         elementsArray.append(element)
       }
     }
