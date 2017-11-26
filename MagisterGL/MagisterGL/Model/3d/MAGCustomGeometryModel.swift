@@ -90,7 +90,7 @@ class MAGCustomGeometryModel: NSObject
             print(j)
             elementsArray.append(MAGHexahedron.init(positions: positionArray!,
                                                     counts: nverCountArray))
-            if j > 10000
+            if j > 100000
             {
                 break
             }
