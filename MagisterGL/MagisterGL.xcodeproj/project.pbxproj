@@ -223,11 +223,9 @@
 			isa = PBXGroup;
 			children = (
 				84541B081FB0AB2900DC6E43 /* Test2 */,
+				9A6D28121F935ABD0059AABE /* Test3 */,
 				9AE615711F8A09FB0067893C /* Test1 */,
 				9AE615661F89FD900067893C /* Test0 */,
-				9A6D28121F935ABD0059AABE /* Test3 */,
-				9AE615711F8A09FB0067893C /* Test2 */,
-				9AE615661F89FD900067893C /* Test1 */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";

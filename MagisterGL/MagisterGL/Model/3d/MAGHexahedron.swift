@@ -14,25 +14,18 @@ import SceneKit
 class MAGHexahedron: NSObject
 {
   var positions: [SCNVector3];
+    var countArray: [Int];
   
-  override init()
-  {
-    let halfSide: Float = 10.0
-    self.positions =
-      [
-        SCNVector3Make(-halfSide, -halfSide,  halfSide + 5),
-        SCNVector3Make( halfSide, -halfSide + 5,  halfSide),
-        SCNVector3Make(-halfSide + 5, -halfSide, -halfSide),
-        SCNVector3Make( halfSide, -halfSide, -halfSide),
-        SCNVector3Make(-halfSide,  halfSide,  halfSide),
-        SCNVector3Make( halfSide,  halfSide,  halfSide),
-        SCNVector3Make(-halfSide,  halfSide, -halfSide),
-        SCNVector3Make( halfSide,  halfSide, -halfSide)]
-  }
-  
-  init(positions: [SCNVector3])
+    init(positions: [SCNVector3],
+         counts: [Int])
   {
     self.positions = positions;
+    self.countArray = counts
   }
+    
+    func minCount() -> Int
+    {
+        return self.countArray.min()!;
+    }
   
 }
