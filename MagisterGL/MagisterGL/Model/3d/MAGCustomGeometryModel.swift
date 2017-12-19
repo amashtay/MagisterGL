@@ -87,15 +87,9 @@ class MAGCustomGeometryModel: NSObject
                 i = i + 1
             }
             j = j + 1
-            print(j)
             elementsArray.append(MAGHexahedron.init(positions: positionArray!,
                                                     counts: nverCountArray))
-            if j > 10000
-            {
-                break
-            }
         }
-        print("done")
         centerPoint = SCNVector3Make((maxVector.x - minVector.x) / 2.0 + minVector.x,
                                      (maxVector.y - minVector.y) / 2.0 + minVector.y,
                                      (maxVector.z - minVector.z) / 2.0 + minVector.z)
