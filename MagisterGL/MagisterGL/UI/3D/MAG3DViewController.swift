@@ -9,9 +9,10 @@
 
 import UIKit
 import SceneKit
+import OpenGLES
 
 
-class MAG3DViewController: UIViewController, UIPopoverPresentationControllerDelegate
+class MAG3DViewController: UIViewController, UIPopoverPresentationControllerDelegate, SCNSceneRendererDelegate
 
 {
   
@@ -21,6 +22,7 @@ class MAG3DViewController: UIViewController, UIPopoverPresentationControllerDele
   {
     super.viewDidLoad()
     
+    self.customGeometryView.delegate = self
   }
     
     override func prepare(for segue: UIStoryboardSegue,
@@ -38,4 +40,14 @@ class MAG3DViewController: UIViewController, UIPopoverPresentationControllerDele
     {
         self.customGeometryView.redraw()
     }
+  
+  //MARK: SCNSceneRendererDelegate
+  
+  func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval)
+  {
+  }
+  
+  func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval)
+  {      }
+  
 }

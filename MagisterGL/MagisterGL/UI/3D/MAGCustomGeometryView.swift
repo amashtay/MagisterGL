@@ -9,6 +9,7 @@
 
 import UIKit
 import SceneKit
+import OpenGLES
 
 
 extension SCNNode
@@ -81,7 +82,7 @@ class MAGCustomGeometryView: SCNView
         scene.rootNode.pivot = SCNMatrix4MakeTranslation(self.model.centerPoint.x,
                                                          self.model.centerPoint.y,
                                                          self.model.centerPoint.z)
-        
+      
         self.scene = scene
         createCube()
     }
@@ -92,6 +93,7 @@ class MAGCustomGeometryView: SCNView
         var globalPositions : [SCNVector3] = []
         var globalNormals : [SCNVector3] = []
         var globalIndicies : [CInt] = []
+        var globalIndiciesCarcas : [CInt] = []
         for hexahedron in self.model.elementsArray
         {
             let positions = hexahedron.positions + hexahedron.positions + hexahedron.positions
@@ -150,6 +152,21 @@ class MAGCustomGeometryView: SCNView
                 4 + addValue, 5 + addValue, 6 + addValue,
                 5 + addValue, 7 + addValue, 6 + addValue] as [CInt]
             globalIndicies = globalIndicies + indices
+          let indicesCarcas = [
+            0 + addValue, 1 + addValue,
+            0 + addValue, 2 + addValue,
+            0 + addValue, 4 + addValue,
+            1 + addValue, 3 + addValue,
+            2 + addValue, 3 + addValue,
+            1 + addValue, 5 + addValue,
+            4 + addValue, 5 + addValue,
+            2 + addValue, 6 + addValue,
+            4 + addValue, 6 + addValue,
+            6 + addValue, 7 + addValue,
+            3 + addValue, 7 + addValue,
+            5 + addValue, 7 + addValue,
+            ] as [CInt]
+          globalIndiciesCarcas = globalIndiciesCarcas + indicesCarcas
           j = j + 1
         }
       
@@ -159,7 +176,7 @@ class MAGCustomGeometryView: SCNView
                            count: MemoryLayout<CInt>.size * globalIndicies.count)
       let element = SCNGeometryElement(data: indexData,
                                        primitiveType: .triangles,
-                                       primitiveCount: Int(12 * j),
+                                       primitiveCount: globalIndicies.count / 3,
                                        bytesPerIndex: MemoryLayout<CInt>.size)
       let geometry = SCNGeometry(sources: [vertexSource, normalSource],
                                  elements: [element])
@@ -170,15 +187,16 @@ class MAGCustomGeometryView: SCNView
       let cubeNode = SCNNode(geometry: geometry)
       self.scene?.rootNode.addChildNode(cubeNode)
       
-      let elementBorder = SCNGeometryElement(data: indexData,
+      let indexDataCarcas = Data(bytes: globalIndiciesCarcas,
+                           count: MemoryLayout<CInt>.size * globalIndiciesCarcas.count)
+      let elementBorder = SCNGeometryElement(data: indexDataCarcas,
                                              primitiveType: .line,
-                                             primitiveCount: Int(12 * j),
+                                             primitiveCount: globalIndiciesCarcas.count / 2,
                                              bytesPerIndex: MemoryLayout<CInt>.size)
       let geometryBorder = SCNGeometry(sources: [vertexSource, normalSource],
                                        elements: [elementBorder])
       geometryBorder.firstMaterial?.diffuse.contents = UIColor.red
       let borderCubeNode = SCNNode(geometry: geometryBorder)
       self.scene?.rootNode.addChildNode(borderCubeNode)
-    }
-    
+  }
 }
